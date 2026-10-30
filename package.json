@@ -1,0 +1,11 @@
+{
+  "name": "etheria-web",
+  "private": true,
+  "type": "module",
+  "description": "Sitio web de EtherIA (www.etheriatech.com). HTML estático generado desde /src, sin dependencias.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "generar": "node scripts/generar.mjs",
+    "verificar": "node scripts/verificar.mjs"
+  }
+}
