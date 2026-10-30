@@ -125,6 +125,7 @@ export const page = ({ path, title, description, body, schema = [], scripts = []
 <meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 ${noindex ? '' : `<link rel="canonical" href="${url}">`}
 <meta name="theme-color" content="#05070a">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EtherIA">
 <meta property="og:locale" content="es_CR">
