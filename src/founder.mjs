@@ -20,6 +20,7 @@ export const FOUNDER = {
     ['user', 'Cubano, radicado en Rohrmoser, San José, Costa Rica'],
     ['heart', 'Más de 6 años en atención al cliente en el sector turístico'],
     ['message', 'Español, inglés y francés'],
+    ['bot', 'Capacitación en automatización e inteligencia artificial'],
   ],
   wa: 'Hola Pedro, vi tu perfil en la web de EtherIA y me gustaría conversar sobre mi negocio.',
 };
