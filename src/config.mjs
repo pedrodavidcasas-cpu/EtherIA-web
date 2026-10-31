@@ -4,8 +4,6 @@ export const SITE = {
   url: 'https://www.etheriatech.com',
   phone: '50664876840',
   phoneDisplay: '+506 6487-6840',
-  // WhatsApp donde responde Kael, el asistente con IA. Solo lo usa el botón "Hablar con Kael".
-  kaelPhone: '50660886254',
   email: 'pedrodavidcasas@gmail.com',
   instagram: 'https://www.instagram.com/etheria_automations',
   facebook: 'https://www.facebook.com/share/1DUQZXEV5k/',

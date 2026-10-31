@@ -130,7 +130,6 @@ export const precios = () => {
       <p>No necesitas saber de tecnología para empezar. Cuéntanos qué quieres mejorar y diseñaremos una solución adaptada a tus necesidades.</p>
       <div class="cta-actions">
         ${btn('Solicitar cotización personalizada', '/#diagnostico', { ico: 'send' })}
-        ${btn('Hablar con Kael, nuestro asistente IA', wa('Hola Kael, vi los precios en la web de EtherIA y quisiera orientación sobre qué solución me conviene.', SITE.kaelPhone), { variant: 'ghost', ico: 'bot', ext: true })}
       </div>
       <p class="contact-line"><a href="mailto:${SITE.email}">${icon('mail', 16)} ${SITE.email}</a><span>·</span><a href="${wa()}" target="_blank" rel="noopener">${icon('message', 16)} ${SITE.phoneDisplay}</a></p>
     </div>
