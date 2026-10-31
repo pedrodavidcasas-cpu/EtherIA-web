@@ -19,9 +19,9 @@ export const SOLUTIONS = [
     name: 'Recepcionista inteligente con IA',
     short: 'Recepcionista con IA',
     tagline: 'Atiende consultas por WhatsApp, recuerda a tus clientes y te avisa cuando hace falta una persona.',
-    seoTitle: 'Chatbot de WhatsApp con IA para empresas en Costa Rica | EtherIA',
+    seoTitle: 'Chatbot de WhatsApp con IA en Costa Rica | EtherIA',
     seoDescription:
-      'Asistentes inteligentes para WhatsApp que responden preguntas frecuentes con la información de tu negocio, recuerdan conversaciones y avisan a una persona cuando hace falta.',
+      'Asistentes de IA para WhatsApp que responden con la información de tu negocio, recuerdan cada conversación y avisan a una persona cuando hace falta.',
     h1: 'Un asistente que atiende a tus clientes mientras tú atiendes tu negocio',
     lead:
       'Imagina que un cliente escribe mientras estás ocupado. Un asistente inteligente puede responder sus preguntas frecuentes, consultar la información que tú autorices y avisarte cuando necesita tu intervención.',
@@ -77,7 +77,7 @@ export const SOLUTIONS = [
     name: 'Gestor de redes sociales con IA',
     short: 'Redes sociales con IA',
     tagline: 'Tu marca activa, coherente y profesional, sin que tengas que gestionar manualmente cada publicación.',
-    seoTitle: 'Gestión automatizada de redes sociales con IA en Costa Rica | EtherIA',
+    seoTitle: 'Gestión de redes sociales con IA en Costa Rica | EtherIA',
     seoDescription:
       'Sistema con IA que planifica contenido según fechas y campañas, prepara creatividades con tu marca y simplifica la publicación, siempre con tu aprobación.',
     h1: 'Tu marca activa, coherente y profesional, sin gestionar cada publicación a mano',
@@ -140,7 +140,7 @@ export const SOLUTIONS = [
     name: 'Gestor inteligente de contenido para productos',
     short: 'Contenido para productos',
     tagline: 'De una foto de tu producto a contenido listo para promocionarlo.',
-    seoTitle: 'Inteligencia artificial para tiendas: contenido de productos | EtherIA',
+    seoTitle: 'IA para tiendas: contenido de productos | EtherIA',
     seoDescription:
       'Convierte las fotos de tus productos en creatividades y textos comerciales con IA, con revisión humana. Para tiendas, emprendedores y e-commerce.',
     h1: 'De una foto de tu producto a contenido listo para promocionarlo',
@@ -192,9 +192,9 @@ export const SOLUTIONS = [
     name: 'Captación y gestión de oportunidades',
     short: 'Gestión de oportunidades',
     tagline: 'Que ningún cliente interesado se pierda por falta de orden o de seguimiento.',
-    seoTitle: 'Automatización de marketing y seguimiento de clientes | EtherIA',
+    seoTitle: 'Seguimiento de clientes y oportunidades con IA | EtherIA',
     seoDescription:
-      'Organiza contactos, clasifica oportunidades y automatiza el seguimiento comercial con IA y n8n, conectado a tus hojas de cálculo o CRM.',
+      'Organiza contactos, clasifica oportunidades y automatiza el seguimiento comercial con IA y n8n, conectado a tus hojas de cálculo o a tu CRM.',
     h1: 'Que ninguna oportunidad se pierda por falta de orden',
     lead:
       'Muchos negocios no pierden clientes por falta de interés, sino por falta de seguimiento. Organizamos tus contactos, clasificamos las oportunidades y automatizamos los recordatorios para que cada persona interesada reciba respuesta a tiempo.',
@@ -249,7 +249,7 @@ export const SOLUTIONS = [
     tagline: 'No construimos páginas web para que simplemente existan. Las diseñamos para que aporten valor a tu negocio.',
     seoTitle: 'Desarrollo web profesional en Costa Rica | EtherIA',
     seoDescription:
-      'Páginas web modernas, rápidas y optimizadas para móviles y SEO, con catálogos, formularios, WhatsApp y automatizaciones conectadas. Diseñadas para aportar valor a tu negocio.',
+      'Páginas web modernas, rápidas y optimizadas para móviles y SEO, con catálogos, formularios y WhatsApp. Diseñadas para aportar valor real a tu negocio.',
     h1: 'Páginas web diseñadas para aportar valor, no solo para existir',
     lead:
       'Creamos sitios modernos, rápidos y pensados para el móvil, que explican con claridad lo que haces y facilitan que tus clientes te contacten. Y como también automatizamos, tu web puede conectarse con el resto de tu operación.',
@@ -301,7 +301,7 @@ export const SOLUTIONS = [
     name: 'Automatización de procesos empresariales',
     short: 'Automatización de procesos',
     tagline: 'Si tu equipo repite constantemente una tarea digital, podemos estudiar cómo simplificarla o automatizarla.',
-    seoTitle: 'Automatización de negocios con n8n e IA en Costa Rica | EtherIA',
+    seoTitle: 'Automatización de negocios con IA en Costa Rica | EtherIA',
     seoDescription:
       'Conectamos tus herramientas y eliminamos tareas repetitivas con n8n e IA: formularios, notificaciones, reportes, aprobaciones e integraciones API.',
     h1: 'Conecta tus herramientas y recupera el tiempo que hoy se va en tareas repetitivas',

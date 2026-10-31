@@ -7,7 +7,7 @@ export const privacidad = () => {
   return page({
     path: '/privacidad',
     title: 'Política de privacidad | EtherIA',
-    description: 'Cómo EtherIA recopila, usa y protege los datos que nos compartes al visitar el sitio, usar el diagnóstico o contactarnos.',
+    description: 'Cómo EtherIA recopila, usa y protege los datos que nos compartes al visitar el sitio, completar el diagnóstico o escribirnos por WhatsApp o correo.',
     schema: [breadcrumbSchema(crumbs)],
     body: `
 <section class="page-hero">

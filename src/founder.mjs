@@ -3,8 +3,8 @@ export const FOUNDER = {
   name: 'Pedro David Casas Alba',
   role: 'Fundador y CEO de EtherIA',
   photo: {
-    small: '/assets/img/pedro-casas-fundador-480.webp',
-    large: '/assets/img/pedro-casas-fundador-900.webp',
+    small: '/assets/img/pedro-casas-fundador-v2-480.webp',
+    large: '/assets/img/pedro-casas-fundador-v2-900.webp',
     w: 900,
     h: 863,
     alt: 'Pedro David Casas Alba, fundador y CEO de EtherIA, en su espacio de trabajo junto al logotipo de EtherIA',

@@ -283,7 +283,7 @@ const spa = caseBySlug('spa-web');
 export const home = () =>
   page({
     path: '/',
-    title: 'EtherIA | Automatización con IA y desarrollo web en Costa Rica',
+    title: 'Automatización con IA y desarrollo web, Costa Rica | EtherIA',
     description:
       'Resolvemos problemas reales de tu negocio con inteligencia artificial, automatización y desarrollo web. Soluciones a medida y atención humana desde Costa Rica.',
     scripts: ['/assets/js/demos.js'],

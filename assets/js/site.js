@@ -41,7 +41,7 @@
 
   // El botón flotante de WhatsApp se aparta cuando hay controles debajo (demos, formulario, pie).
   const float = document.querySelector('.wa-float');
-  const blockers = document.querySelectorAll('.demo-shell, .diag-card, .site-footer');
+  const blockers = document.querySelectorAll('.demo-shell, .diag-card, .calc-card, .site-footer');
   if (float && blockers.length && 'IntersectionObserver' in window) {
     const visible = new Set();
     const fo = new IntersectionObserver((entries) => {

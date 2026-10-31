@@ -53,10 +53,12 @@ for (const f of html) {
   const name = rel(f);
   const h1 = (src.match(/<h1[\s>]/g) || []).length;
   if (h1 !== 1) fail(f, `debe tener exactamente un <h1> (tiene ${h1})`);
-  if (!/<title>[^<]{10,70}<\/title>/.test(src)) fail(f, '<title> ausente o fuera de 10–70 caracteres');
-  const desc = src.match(/<meta name="description" content="([^"]*)"/);
+  const title = src.match(/<title>([^<]*)<\/title>/)?.[1].replaceAll('&amp;', '&') ?? '';
+  if (title.length < 10 || title.length > 70) fail(f, '<title> ausente o fuera de 10–70 caracteres');
+  else if (title.length > 60) warn.push(`${name}: <title> de ${title.length} caracteres (Google suele cortar a partir de 60)`);
+  const desc = src.match(/<meta name="description" content="([^"]*)"/)?.map((d) => d.replaceAll('&amp;', '&'));
   if (!desc) fail(f, 'falta meta description');
-  else if (desc[1].length < 70 || desc[1].length > 175) warn.push(`${name}: meta description de ${desc[1].length} caracteres`);
+  else if (name !== '404.html' && (desc[1].length < 140 || desc[1].length > 160)) warn.push(`${name}: meta description de ${desc[1].length} caracteres`);
   if (name !== '404.html' && !/<link rel="canonical" href="https:\/\/www\.etheriatech\.com/.test(src)) fail(f, 'falta canonical');
   if (/\sstyle="/.test(src)) fail(f, 'contiene atributos style="" (bloqueados por la CSP)');
   if (/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>/.test(src)) fail(f, 'contiene <script> en línea (bloqueado por la CSP)');

@@ -6,6 +6,7 @@ const NAV = [
   ['Soluciones', '/#soluciones'],
   ['Demos', '/#demos'],
   ['Proyectos', '/proyectos'],
+  ['Precios', '/precios'],
   ['Fundador', '/#fundador'],
   ['Cómo trabajamos', '/#como-trabajamos'],
   ['Preguntas', '/#preguntas'],
@@ -51,6 +52,7 @@ const footer = () => `
       <h2 class="footer-title">EtherIA</h2>
       <ul class="footer-links">
         <li><a href="/proyectos">Proyectos</a></li>
+        <li><a href="/precios">Precios</a></li>
         <li><a href="/#fundador">Fundador</a></li>
         <li><a href="/#como-trabajamos">Cómo trabajamos</a></li>
         <li><a href="/#diagnostico">Diagnóstico</a></li>
@@ -90,7 +92,7 @@ const BASE_SCHEMA = {
       email: SITE.email,
       image: `${SITE.url}${SITE.ogImage}`,
       logo: `${SITE.url}/assets/img/logo-etheria-512.png`,
-      address: { '@type': 'PostalAddress', addressCountry: 'CR' },
+      address: { '@type': 'PostalAddress', addressLocality: 'San José', addressRegion: 'San José', addressCountry: 'CR' },
       areaServed: { '@type': 'Country', name: 'Costa Rica' },
       sameAs: [SITE.instagram, SITE.facebook],
       founder: { '@id': `${SITE.url}/#fundador` },
@@ -124,6 +126,7 @@ export const page = ({ path, title, description, body, schema = [], scripts = []
 <meta name="description" content="${h(description)}">
 <meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 ${noindex ? '' : `<link rel="canonical" href="${url}">`}
+<meta name="author" content="EtherIA">
 <meta name="theme-color" content="#05070a">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
