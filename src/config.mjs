@@ -2,8 +2,10 @@
 export const SITE = {
   name: 'EtherIA',
   url: 'https://www.etheriatech.com',
-  phone: '50660886254',
-  phoneDisplay: '+506 6088-6254',
+  phone: '50664876840',
+  phoneDisplay: '+506 6487-6840',
+  // WhatsApp donde responde Kael, el asistente con IA. Solo lo usa el botón "Hablar con Kael".
+  kaelPhone: '50660886254',
   email: 'pedrodavidcasas@gmail.com',
   instagram: 'https://www.instagram.com/etheria_automations',
   facebook: 'https://www.facebook.com/share/1DUQZXEV5k/',
@@ -13,7 +15,7 @@ export const SITE = {
 
 export const WA_DEFAULT = 'Hola, quisiera conversar sobre mi negocio y ver cómo podrían ayudarme.';
 
-export const wa = (text = WA_DEFAULT) => `https://wa.me/${SITE.phone}?text=${encodeURIComponent(text)}`;
+export const wa = (text = WA_DEFAULT, phone = SITE.phone) => `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
 // Escapa texto para insertarlo en HTML.
 export const h = (s) =>
