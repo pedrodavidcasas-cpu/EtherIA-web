@@ -30,7 +30,7 @@ export const PLANS = [
     calcName: 'Redes sociales',
     text: 'Mantén tus redes sociales activas mediante automatizaciones que ayudan a planificar, generar y publicar contenido de manera inteligente.',
     benefits: ['Publicaciones automatizadas.', 'Campañas para fechas especiales.', 'Ahorro de tiempo en gestión de contenido.'],
-    impl: [170000, 250000],
+    impl: [140000, 250000],
     monthly: [50000, 75000],
   },
   {
@@ -40,7 +40,7 @@ export const PLANS = [
     calcName: 'Asistentes con IA',
     text: 'Ofrece atención inteligente a tus clientes las 24 horas mediante asistentes virtuales capaces de responder consultas y gestionar solicitudes.',
     benefits: ['Atención automática 24/7.', 'Respuestas personalizadas con IA.', 'Integración con herramientas del negocio.'],
-    impl: [200000, 390000],
+    impl: [160000, 390000],
     monthly: [60000, 100000],
   },
   {
@@ -50,7 +50,7 @@ export const PLANS = [
     calcName: 'Sistemas comerciales avanzados',
     text: 'Conecta captación, atención al cliente, inteligencia artificial y seguimiento comercial en un único sistema inteligente.',
     benefits: ['Automatización de procesos comerciales.', 'Clasificación inteligente de conversaciones.', 'Integraciones avanzadas y seguimiento.'],
-    impl: [280000, 500000],
+    impl: [240000, 500000],
     monthly: [70000, 110000],
   },
 ];
