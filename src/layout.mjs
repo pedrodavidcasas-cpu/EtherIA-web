@@ -73,8 +73,6 @@ const footer = () => `
       <ul class="footer-links">
         <li><a href="${wa()}" target="_blank" rel="noopener">${icon('message', 16)} WhatsApp ${SITE.phoneDisplay}</a></li>
         <li><a href="mailto:${SITE.email}">${icon('mail', 16)} ${SITE.email}</a></li>
-        <li><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="${SITE.facebook}" target="_blank" rel="noopener">Facebook</a></li>
       </ul>
       <p class="footer-note">Costa Rica · Atención personalizada</p>
     </div>
@@ -102,7 +100,6 @@ const BASE_SCHEMA = {
       logo: `${SITE.url}/assets/img/logo-etheria-512.png`,
       address: { '@type': 'PostalAddress', addressLocality: 'San José', addressRegion: 'San José', addressCountry: 'CR' },
       areaServed: { '@type': 'Country', name: 'Costa Rica' },
-      sameAs: [SITE.instagram, SITE.facebook],
       founder: { '@id': `${SITE.url}/#fundador` },
       knowsAbout: ['Automatización de procesos', 'Inteligencia artificial', 'n8n', 'Chatbots de WhatsApp', 'Desarrollo web', 'Gestión de redes sociales'],
     },
