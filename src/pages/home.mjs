@@ -300,7 +300,7 @@ export const home = () =>
     <div class="hero-copy">
       <p class="eyebrow">Inteligencia artificial · Automatización · Desarrollo web · Costa Rica</p>
       <h1 id="hero-title">Tu competencia ya está en Fórmula 1. <span class="grad">No sigas montado en un burro.</span></h1>
-      <p class="hero-lead hero-hook">La inteligencia artificial no reemplaza a las personas: <strong>las potencia</strong>. Una persona apoyada por IA siempre avanzará más rápido que una que lo hace todo a mano. Subirte a ese auto ya no es opcional.</p>
+      <p class="hero-lead hero-hook">La automatización no reemplaza a las personas: <strong>las potencia</strong>. Una persona apoyada por IA siempre avanzará más rápido que una que lo hace todo a mano. Subirte a ese auto ya no es opcional.</p>
       <div class="hero-actions">
         ${btn('Cuéntanos qué necesita tu negocio', '#diagnostico', { ico: 'message' })}
         ${btn('Descubre nuestras soluciones', '#soluciones', { variant: 'ghost' })}
