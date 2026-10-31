@@ -42,7 +42,6 @@ export const PLANS = [
     benefits: ['Atención automática 24/7.', 'Respuestas personalizadas con IA.', 'Integración con herramientas del negocio.'],
     impl: [200000, 390000],
     monthly: [60000, 100000],
-    featured: true,
   },
   {
     id: 'sistemas',
