@@ -1,6 +1,14 @@
 import { SITE, wa, h, icon } from './config.mjs';
 import { SOLUTIONS } from './solutions.mjs';
 import { FOUNDER } from './founder.mjs';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+// /assets se guarda 7 días en caché (vercel.json): añade un ?v= con el hash del archivo
+// para que el navegador descargue la versión nueva en cuanto cambia.
+const ROOT = new URL('../', import.meta.url);
+const versioned = (path) =>
+  `${path}?v=${createHash('sha256').update(readFileSync(new URL('.' + path, ROOT))).digest('hex').slice(0, 10)}`;
 
 const NAV = [
   ['Soluciones', '/#soluciones'],
@@ -146,9 +154,9 @@ ${noindex ? '' : `<link rel="canonical" href="${url}">`}
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/site.js" defer></script>
-${scripts.map((s) => `<script src="${s}" defer></script>`).join('\n')}
+<link rel="stylesheet" href="${versioned('/assets/css/site.css')}">
+<script src="${versioned('/assets/js/site.js')}" defer></script>
+${scripts.map((s) => `<script src="${versioned(s)}" defer></script>`).join('\n')}
 <script type="application/ld+json">${JSON.stringify(graph)}</script>
 </head>
 <body>
