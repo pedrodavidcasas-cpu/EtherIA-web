@@ -716,7 +716,8 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .price-tile-main { margin: auto 0 0; padding-top: 16px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; line-height: 1.1; }
 .price-tile-main span { color: var(--muted); font-size: 0.82rem; }
 .price-tile-main strong { font-size: 1.55rem; font-weight: 700; letter-spacing: -0.03em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.price-tile-monthly { margin: 4px 0 0; color: var(--muted); font-size: 0.88rem; }
+.price-tile-monthly { margin: 6px 0 0; color: var(--muted); font-size: 0.88rem; line-height: 1.35; }
+.price-tile-monthly span { display: block; font-size: 0.8rem; }
 .price-strip-foot { margin-top: 32px; text-align: center; }
 .price-strip-foot .cta-actions { margin-top: 0; }
 .price-strip-foot .fine-print { max-width: 640px; margin-inline: auto; }
@@ -735,17 +736,18 @@ button, input, textarea, select { font: inherit; color: inherit; }
   .price-note-box { padding: 16px; gap: 12px; }
   .price-strip { flex-direction: column; gap: 10px; }
   .price-tile {
-    flex: none; max-width: none; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: 'ico name price' 'ico name monthly';
-    align-items: center; column-gap: 14px; padding: 16px;
+    flex: none; max-width: none; display: grid; grid-template-columns: auto 1fr; grid-template-areas: 'ico name' 'ico price' 'ico monthly';
+    align-items: center; column-gap: 14px; row-gap: 4px; padding: 16px;
   }
   .price-tile:hover { transform: none; }
   .price-tile .sol-icon { grid-area: ico; width: 40px; height: 40px; }
   .price-tile h3 { grid-area: name; margin: 0; font-size: 0.95rem; }
-  .price-tile-main { grid-area: price; margin: 0; padding: 0; justify-content: flex-end; }
+  .price-tile-main { grid-area: price; margin: 0; padding: 0; }
   .price-tile-main { gap: 4px; }
   .price-tile-main span { font-size: 0.72rem; }
   .price-tile-main strong { font-size: 1.25rem; }
-  .price-tile-monthly { grid-area: monthly; margin: 0; text-align: right; font-size: 0.78rem; }
+  .price-tile-monthly { grid-area: monthly; margin: 0; font-size: 0.8rem; }
+  .price-tile-monthly span { display: inline; font-size: inherit; }
   .price-tile-flag { top: -9px; right: 12px; background: var(--bg); }
   .price-strip-foot { text-align: left; }
 }

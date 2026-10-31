@@ -359,8 +359,8 @@ ${founder()}
         ${p.featured ? '<span class="price-tile-flag">Destacada</span>' : ''}
         <span class="sol-icon">${icon(p.icon, 22)}</span>
         <h3><a href="/precios#plan-${p.id}" class="stretched">${h(p.name)}</a></h3>
-        <p class="price-tile-main"><span>Desde</span> <strong>${crc(p.impl[0])}</strong></p>
-        <p class="price-tile-monthly">+ ${crc(p.monthly[0])} / mes</p>
+        <p class="price-tile-main"><span>Desde</span> <strong>${crc(p.impl[0])}</strong> <span>de implementación</span></p>
+        <p class="price-tile-monthly">+ ${crc(p.monthly[0])} al mes <span>de soporte y mantenimiento</span></p>
       </li>`).join('')}
     </ul>
     ${priceNote()}
