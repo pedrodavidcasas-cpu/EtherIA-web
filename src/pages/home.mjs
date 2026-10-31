@@ -2,6 +2,7 @@ import { SITE, wa, h, icon } from '../config.mjs';
 import { SOLUTIONS, bySlug } from '../solutions.mjs';
 import { CASES, caseBySlug } from '../cases.mjs';
 import { FOUNDER } from '../founder.mjs';
+import { PLANS, crc, priceNote } from '../pricing.mjs';
 import { page, btn, sectionHead, faqBlock, faqSchema } from '../layout.mjs';
 
 const PROBLEMS = [
@@ -347,6 +348,28 @@ ${founder()}
   <div class="container">
     ${sectionHead('Soluciones', 'Tecnología diseñada alrededor de tu negocio', 'Cada solución parte de experiencia práctica en proyectos reales y se adapta a tus procesos, tus objetivos y tu presupuesto.', { id: 'soluciones-title' })}
     <div class="sol-grid">${SOLUTIONS.map(solutionCard).join('')}</div>
+  </div>
+</section>
+
+<section class="section" id="precios" aria-labelledby="precios-title">
+  <div class="container">
+    ${sectionHead('Precios orientativos', 'Tecnología inteligente. <span class="grad">Inversiones a tu medida.</span>', 'Automatizar tu negocio no debería ser un lujo. Estos son los precios iniciales de nuestras soluciones.', { id: 'precios-title' })}
+    <ul class="price-strip">${PLANS.map((p) => `
+      <li class="price-tile${p.featured ? ' is-featured' : ''} reveal">
+        ${p.featured ? '<span class="price-tile-flag">Destacada</span>' : ''}
+        <span class="sol-icon">${icon(p.icon, 22)}</span>
+        <h3><a href="/precios#plan-${p.id}" class="stretched">${h(p.name)}</a></h3>
+        <p class="price-tile-main"><span>Desde</span> <strong>${crc(p.impl[0])}</strong></p>
+        <p class="price-tile-monthly">+ ${crc(p.monthly[0])} / mes</p>
+      </li>`).join('')}
+    </ul>
+    ${priceNote()}
+    <div class="price-strip-foot reveal">
+      <div class="cta-actions">
+        ${btn('Ver precios y calcular mi inversión', '/precios#calculadora', { ico: 'arrow' })}
+        ${btn('Solicitar cotización', wa('Hola, vi los precios en su web y quisiera solicitar una cotización para mi negocio.'), { variant: 'ghost', ico: 'message', ext: true })}
+      </div>
+    </div>
   </div>
 </section>
 

@@ -1,3 +1,4 @@
+import { icon } from './config.mjs';
 // Precios orientativos de la página /precios. Son referencias iniciales, no tarifas cerradas.
 // `impl` y `monthly` son rangos [mínimo, máximo] en colones: el mínimo es el "desde" de la tarjeta
 // y la calculadora usa mínimo (básica), punto medio redondeado a ₡5.000 (intermedia) y máximo (avanzada).
@@ -63,3 +64,13 @@ export const LEVELS = [
 
 // Formato de colones con punto de miles: 80000 → "₡80.000". Debe coincidir con assets/js/precios.js.
 export const crc = (n) => '₡' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+// Aviso visible de que los precios son una referencia. `extra` añade una segunda frase más detallada.
+export const priceNote = (extra = '') => `
+<div class="price-note-box reveal" role="note">
+  <span class="price-note-ico">${icon('info', 20)}</span>
+  <div>
+    <p><strong>Estos precios son para que tengas una idea.</strong> Cada automatización es distinta, así que el precio final puede variar según lo que necesite tu negocio.</p>
+    ${extra ? `<p class="price-note-extra">${extra}</p>` : ''}
+  </div>
+</div>`;

@@ -1,5 +1,5 @@
 import { SITE, wa, h, icon } from '../config.mjs';
-import { PLANS, LEVELS, crc } from '../pricing.mjs';
+import { PLANS, LEVELS, crc, priceNote } from '../pricing.mjs';
 import { page, btn, sectionHead, breadcrumb, breadcrumbSchema } from '../layout.mjs';
 
 const INCLUDES = [
@@ -63,7 +63,7 @@ const calculator = () => {
     </div>
     <p class="sr-only" aria-live="polite" data-calc-live>Estimación para ${h(p.name)}, complejidad básica: implementación ${crc(p.impl[0])} y mensualidad ${crc(p.monthly[0])}.</p>
     ${btn('Solicitar esta cotización', wa(calcText(p, 'Básica', p.impl[0], p.monthly[0])), { ico: 'message', ext: true, cls: 'calc-cta' }).replace('<a ', '<a data-calc-cta ')}
-    <p class="calc-disclaimer">${icon('shield', 16)}<span>Estimación orientativa y no vinculante. No es una cotización definitiva: el precio final se confirma tras analizar tu caso.</span></p>
+    <p class="calc-disclaimer">${icon('shield', 16)}<span>Estimación para que tengas una idea, no vinculante. Cada automatización es distinta, así que el precio final puede variar y se confirma tras analizar tu caso.</span></p>
   </div>
 </div>`;
 };
@@ -102,7 +102,7 @@ export const precios = () => {
   <div class="container">
     ${sectionHead('Soluciones', 'Automatización e inteligencia artificial a tu alcance', 'Precios iniciales para que tengas una referencia clara. Cada propuesta se ajusta a tus procesos, tus objetivos y tu presupuesto.', { id: 'planes-title' })}
     <div class="price-grid">${PLANS.map(priceCard).join('')}</div>
-    <p class="price-disclaimer">Los precios mostrados son orientativos y corresponden a configuraciones iniciales. La inversión final dependerá de las funcionalidades, integraciones, complejidad y volumen de uso de cada proyecto.</p>
+    ${priceNote('Los precios mostrados son orientativos y corresponden a configuraciones iniciales. La inversión final dependerá de las funcionalidades, integraciones, complejidad y volumen de uso de cada proyecto.')}
   </div>
 </section>
 

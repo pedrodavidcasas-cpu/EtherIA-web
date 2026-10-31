@@ -672,7 +672,11 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .price-monthly strong { color: var(--text); font-size: 1.1rem; font-weight: 600; }
 .price-card .mini-list { margin-bottom: 24px; }
 .price-cta { margin-top: auto; width: 100%; }
-.price-disclaimer { max-width: 760px; margin: 32px auto 0; text-align: center; color: var(--dim); font-size: 0.9rem; }
+.price-note-box { display: flex; gap: 14px; align-items: flex-start; max-width: 820px; margin: 32px auto 0; padding: 18px 22px; border-radius: var(--radius-sm); border: 1px solid rgba(46, 230, 166, 0.28); background: linear-gradient(120deg, rgba(46, 230, 166, 0.08), rgba(34, 211, 238, 0.04)); }
+.price-note-box p { margin: 0; color: var(--silver); font-size: 0.97rem; }
+.price-note-box strong { color: var(--text); }
+.price-note-box .price-note-extra { margin-top: 8px; color: var(--dim); font-size: 0.86rem; }
+.price-note-ico { display: inline-flex; color: var(--emerald); margin-top: 2px; }
 
 .calc-card { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(24px, 4vw, 48px); max-width: 1040px; margin-inline: auto; padding: clamp(22px, 3.5vw, 40px); border-radius: 26px; border: 1px solid var(--line-2); background: linear-gradient(180deg, rgba(17, 24, 33, 0.92), rgba(9, 13, 19, 0.92)); box-shadow: var(--shadow); }
 .calc-group { border: 0; margin: 0 0 26px; padding: 0; min-width: 0; }
@@ -695,6 +699,28 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .calc-disclaimer { display: flex; gap: 8px; align-items: flex-start; margin: 16px 0 0; color: var(--dim); font-size: 0.84rem; }
 .calc-disclaimer .icon { color: var(--emerald); margin-top: 3px; }
 
+/* Bloque de precios en la página de inicio */
+.price-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.price-tile {
+  position: relative; flex: 1 1 200px; max-width: 280px; display: flex; flex-direction: column; padding: 22px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.price-tile:hover { border-color: rgba(46, 230, 166, 0.35); transform: translateY(-3px); box-shadow: 0 22px 50px -30px rgba(46, 230, 166, 0.35); }
+.price-tile.is-featured { border-color: rgba(46, 230, 166, 0.3); background: radial-gradient(300px 160px at 100% 0%, rgba(46, 230, 166, 0.09), transparent 70%), linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)); }
+.price-tile .sol-icon { width: 42px; height: 42px; }
+.price-tile h3 { margin-top: 14px; font-size: 1rem; line-height: 1.3; }
+.price-tile h3 a:hover { color: inherit; }
+.price-tile-flag { position: absolute; top: 14px; right: 14px; padding: 3px 9px; border-radius: 999px; border: 1px solid rgba(34, 211, 238, 0.3); background: rgba(34, 211, 238, 0.07); color: var(--cyan); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.price-tile-main { margin: auto 0 0; padding-top: 16px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; line-height: 1.1; }
+.price-tile-main span { color: var(--muted); font-size: 0.82rem; }
+.price-tile-main strong { font-size: 1.55rem; font-weight: 700; letter-spacing: -0.03em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.price-tile-monthly { margin: 4px 0 0; color: var(--muted); font-size: 0.88rem; }
+.price-strip-foot { margin-top: 32px; text-align: center; }
+.price-strip-foot .cta-actions { margin-top: 0; }
+.price-strip-foot .fine-print { max-width: 640px; margin-inline: auto; }
+
 @media (max-width: 960px) {
   .price-grid { grid-template-columns: repeat(2, 1fr); }
   .price-card, .price-card:nth-child(4) { grid-column: auto; }
@@ -706,7 +732,22 @@ button, input, textarea, select { font: inherit; color: inherit; }
   .price-card:last-child { width: 100%; }
   .price-card { padding: 24px; }
   .price-badge { border-radius: 14px; }
-  .price-disclaimer { text-align: left; }
+  .price-note-box { padding: 16px; gap: 12px; }
+  .price-strip { flex-direction: column; gap: 10px; }
+  .price-tile {
+    flex: none; max-width: none; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: 'ico name price' 'ico name monthly';
+    align-items: center; column-gap: 14px; padding: 16px;
+  }
+  .price-tile:hover { transform: none; }
+  .price-tile .sol-icon { grid-area: ico; width: 40px; height: 40px; }
+  .price-tile h3 { grid-area: name; margin: 0; font-size: 0.95rem; }
+  .price-tile-main { grid-area: price; margin: 0; padding: 0; justify-content: flex-end; }
+  .price-tile-main { gap: 4px; }
+  .price-tile-main span { font-size: 0.72rem; }
+  .price-tile-main strong { font-size: 1.25rem; }
+  .price-tile-monthly { grid-area: monthly; margin: 0; text-align: right; font-size: 0.78rem; }
+  .price-tile-flag { top: -9px; right: 12px; background: var(--bg); }
+  .price-strip-foot { text-align: left; }
 }
 
 /* ---------- Animaciones de aparición ---------- */
