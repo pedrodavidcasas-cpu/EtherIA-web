@@ -1,5 +1,10 @@
 // Comportamiento común: menú móvil, cabecera al hacer scroll, apariciones suaves y año del pie.
 (() => {
+  // El diagnóstico se mudó de /#diagnostico a /diagnostico: los enlaces antiguos siguen funcionando.
+  const toDiag = () => { if (location.pathname === '/' && location.hash === '#diagnostico') { location.replace('/diagnostico'); return true; } return false; };
+  if (toDiag()) return;
+  window.addEventListener('hashchange', toDiag);
+
   const header = document.querySelector('[data-header]');
   const toggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-menu]');

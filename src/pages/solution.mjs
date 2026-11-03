@@ -46,8 +46,8 @@ export const solutionPage = (s) => {
         <h1>${h(s.h1)}</h1>
         <p class="hero-lead">${h(s.lead)}</p>
         <div class="hero-actions">
-          ${btn('Conversemos sobre tu caso', wa(s.wa), { ico: 'message', ext: true })}
-          ${btn('Hacer el diagnóstico', '/#diagnostico', { variant: 'ghost' })}
+          ${btn('Cuéntame qué necesitas', '/diagnostico', { ico: 'message' })}
+          ${btn('Escríbenos por WhatsApp', wa(s.wa), { variant: 'ghost', ico: 'message', ext: true })}
         </div>
       </div>
       <aside class="for-who" aria-labelledby="forwho">

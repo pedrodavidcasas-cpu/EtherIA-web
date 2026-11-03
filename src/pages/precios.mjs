@@ -1,5 +1,6 @@
 import { SITE, wa, h, icon } from '../config.mjs';
-import { PLANS, LEVELS, crc, priceNote } from '../pricing.mjs';
+import { PLANS, LEVELS, QUOTE_ONLY, crc, priceNote } from '../pricing.mjs';
+import { bySlug } from '../solutions.mjs';
 import { page, btn, sectionHead, breadcrumb, breadcrumbSchema } from '../layout.mjs';
 
 const INCLUDES = [
@@ -91,8 +92,8 @@ export const precios = () => {
 <section class="page-hero price-hero">
   <div class="container">
     ${breadcrumb(crumbs)}
-    <p class="eyebrow">Precios y soluciones</p>
-    <h1>Tecnología inteligente. <span class="grad">Inversiones a tu medida.</span></h1>
+    <p class="eyebrow">Tecnología inteligente · Inversiones a tu medida</p>
+    <h1>Precios orientativos de automatización con IA <span class="grad">en Costa Rica</span></h1>
     <p class="hero-lead">En EtherIA creemos que automatizar tu negocio no debería ser un lujo. Descubre nuestras soluciones y conoce cuánto podrías invertir para ahorrar tiempo, mejorar tu atención y hacer crecer tu empresa.</p>
     <p class="price-badge">${icon('check', 16)}<span>Precios orientativos · Soluciones personalizadas · Sin compromiso</span></p>
   </div>
@@ -102,6 +103,7 @@ export const precios = () => {
   <div class="container">
     ${sectionHead('Soluciones', 'Automatización e inteligencia artificial a tu alcance', 'Precios iniciales para que tengas una referencia clara. Cada propuesta se ajusta a tus procesos, tus objetivos y tu presupuesto.', { id: 'planes-title' })}
     <div class="price-grid">${PLANS.map(priceCard).join('')}</div>
+    <p class="price-quote-only">${icon('pen', 16)}<span>${QUOTE_ONLY.map((x) => `<a href="/soluciones/${x}">${h(bySlug(x).short)}</a>`).join(' y ')}: cotización a medida según el proyecto.</span></p>
     ${priceNote('Los precios mostrados son orientativos y corresponden a configuraciones iniciales. La inversión final dependerá de las funcionalidades, integraciones, complejidad y volumen de uso de cada proyecto.')}
   </div>
 </section>
@@ -129,7 +131,7 @@ export const precios = () => {
       <h2 id="cotizar-title">Tu negocio puede trabajar de forma más inteligente.</h2>
       <p>No necesitas saber de tecnología para empezar. Cuéntanos qué quieres mejorar y diseñaremos una solución adaptada a tus necesidades.</p>
       <div class="cta-actions">
-        ${btn('Solicitar cotización personalizada', '/#diagnostico', { ico: 'send' })}
+        ${btn('Cuéntame qué necesitas', '/diagnostico', { ico: 'send' })}
       </div>
       <p class="contact-line"><a href="mailto:${SITE.email}">${icon('mail', 16)} ${SITE.email}</a><span>·</span><a href="${wa()}" target="_blank" rel="noopener">${icon('message', 16)} ${SITE.phoneDisplay}</a></p>
     </div>

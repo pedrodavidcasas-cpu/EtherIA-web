@@ -32,8 +32,8 @@ export const proyectos = () => {
   <div class="container">
     ${breadcrumb(crumbs)}
     <p class="eyebrow">Proyectos reales</p>
-    <h1>Lo que hemos construido y cómo funciona</h1>
-    <p class="hero-lead">Preferimos mostrar trabajo real antes que hacer promesas. Aquí explicamos el problema, lo que construimos y el estado actual de cada proyecto, sin métricas infladas ni testimonios inventados.</p>
+    <h1>Proyectos de automatización con IA y desarrollo web</h1>
+    <p class="hero-lead">Lo que hemos construido y cómo funciona. Preferimos mostrar trabajo real antes que hacer promesas. Aquí explicamos el problema, lo que construimos y el estado actual de cada proyecto, sin métricas infladas ni testimonios inventados.</p>
     <nav class="case-index" aria-label="Proyectos en esta página"><ul>${CASES.map((c) => `<li><a href="#${c.slug}">${h(c.title)}</a></li>`).join('')}</ul></nav>
   </div>
 </section>

@@ -9,7 +9,7 @@ export const SITE = {
   instagram: 'https://www.instagram.com/etheria_automations',
   facebook: 'https://www.facebook.com/share/1DUQZXEV5k/',
   ogImage: '/assets/img/og-etheria.jpg',
-  updated: '2026-10-30',
+  updated: '2026-11-02',
 };
 
 export const WA_DEFAULT = 'Hola, quisiera conversar sobre mi negocio y ver cómo podrían ayudarme.';

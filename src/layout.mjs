@@ -10,10 +10,11 @@ const ROOT = new URL('../', import.meta.url);
 const versioned = (path) =>
   `${path}?v=${createHash('sha256').update(readFileSync(new URL('.' + path, ROOT))).digest('hex').slice(0, 10)}`;
 
+// Mismo orden que las secciones de la portada.
 const NAV = [
   ['Soluciones', '/#soluciones'],
-  ['Demos', '/#demos'],
   ['Proyectos', '/proyectos'],
+  ['Demos', '/#demos'],
   ['Precios', '/precios'],
   ['Fundador', '/#fundador'],
   ['Cómo trabajamos', '/#como-trabajamos'],
@@ -33,7 +34,7 @@ const header = () => `
     ${logo()}
     <nav class="main-nav" id="menu" aria-label="Principal" data-menu>
       <ul>${NAV.map(([t, u]) => `<li><a href="${u}">${t}</a></li>`).join('')}</ul>
-      <a class="btn btn-primary btn-sm nav-cta-mobile" href="/#diagnostico">Cuéntanos qué necesitas</a>
+      <a class="btn btn-primary btn-sm nav-cta-mobile" href="/diagnostico">Cuéntame qué necesitas</a>
     </nav>
     <div class="header-actions">
       <a class="btn btn-primary btn-sm" href="${wa()}" target="_blank" rel="noopener">Hablemos</a>
@@ -49,8 +50,11 @@ const footer = () => `
   <div class="container footer-grid">
     <div class="footer-brand">
       ${logo()}
-      <p>Soluciones inteligentes para empresas y emprendedores. Automatización, inteligencia artificial y desarrollo web desde Costa Rica.</p>
-      <p class="footer-quote">“La tecnología está al servicio de las personas y los negocios, nunca al revés.”</p>
+      <p>Automatización con inteligencia artificial y desarrollo web para negocios. San José, Costa Rica.</p>
+      <ul class="footer-links footer-contact">
+        <li><a href="${wa()}" target="_blank" rel="noopener">${icon('message', 16)} WhatsApp ${SITE.phoneDisplay}</a></li>
+        <li><a href="mailto:${SITE.email}">${icon('mail', 16)} ${SITE.email}</a></li>
+      </ul>
     </div>
     <div>
       <h2 class="footer-title">Soluciones</h2>
@@ -61,20 +65,11 @@ const footer = () => `
       <ul class="footer-links">
         <li><a href="/proyectos">Proyectos</a></li>
         <li><a href="/precios">Precios</a></li>
+        <li><a href="/diagnostico">Diagnóstico</a></li>
         <li><a href="/#fundador">Fundador</a></li>
-        <li><a href="/#como-trabajamos">Cómo trabajamos</a></li>
-        <li><a href="/#diagnostico">Diagnóstico</a></li>
         <li><a href="/#preguntas">Preguntas frecuentes</a></li>
-        <li><a href="/privacidad">Política de privacidad</a></li>
+        <li><a href="/privacidad">Privacidad</a></li>
       </ul>
-    </div>
-    <div>
-      <h2 class="footer-title">Contacto</h2>
-      <ul class="footer-links">
-        <li><a href="${wa()}" target="_blank" rel="noopener">${icon('message', 16)} WhatsApp ${SITE.phoneDisplay}</a></li>
-        <li><a href="mailto:${SITE.email}">${icon('mail', 16)} ${SITE.email}</a></li>
-      </ul>
-      <p class="footer-note">Costa Rica · Atención personalizada</p>
     </div>
   </div>
   <div class="container footer-bottom">
@@ -101,7 +96,7 @@ const BASE_SCHEMA = {
       address: { '@type': 'PostalAddress', addressLocality: 'San José', addressRegion: 'San José', addressCountry: 'CR' },
       areaServed: { '@type': 'Country', name: 'Costa Rica' },
       founder: { '@id': `${SITE.url}/#fundador` },
-      knowsAbout: ['Automatización de procesos', 'Inteligencia artificial', 'n8n', 'Chatbots de WhatsApp', 'Desarrollo web', 'Gestión de redes sociales'],
+      knowsAbout: ['Automatización con inteligencia artificial', 'Automatización de procesos empresariales', 'Chatbots para empresas', 'Asistentes de WhatsApp con IA', 'Automatización de redes sociales', 'Desarrollo web', 'n8n'],
     },
     {
       '@type': 'Person',
@@ -205,7 +200,7 @@ export const diagramFigure = (d, caption = d.caption || 'Diagrama del flujo real
   <figcaption>${h(caption)}${d.note ? ' ' + h(d.note) : ''}</figcaption>
 </figure>`;
 
-export const ctaBand =(title, text, waText, { secondary = ['Hacer el diagnóstico', '/#diagnostico'] } = {}) => `
+export const ctaBand = (title, text, waText, { secondary = ['Cuéntame qué necesitas', '/diagnostico'] } = {}) => `
 <section class="section">
   <div class="container">
     <div class="cta-band reveal">
@@ -214,7 +209,7 @@ export const ctaBand =(title, text, waText, { secondary = ['Hacer el diagnóstic
         <p>${text}</p>
       </div>
       <div class="cta-actions">
-        ${btn('Hablemos por WhatsApp', wa(waText), { ico: 'message', ext: true })}
+        ${btn('Escríbenos por WhatsApp', wa(waText), { ico: 'message', ext: true })}
         ${secondary ? btn(secondary[0], secondary[1], { variant: 'ghost' }) : ''}
       </div>
     </div>

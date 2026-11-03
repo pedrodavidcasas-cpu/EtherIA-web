@@ -11,7 +11,7 @@ src/                 Contenido y plantillas (fuente de verdad)
   cases.mjs          Proyectos y casos reales (+ diagramas de los flujos en n8n)
   founder.mjs        Foto y biografía del fundador (sección "Conoce a la persona detrás de EtherIA")
   layout.mjs         <head>, cabecera, pie, SEO y datos estructurados
-  pages/             Inicio, soluciones, proyectos, privacidad, 404
+  pages/             Inicio, soluciones, proyectos, precios, diagnóstico, privacidad, 404
 scripts/
   generar.mjs        Genera los HTML, sitemap.xml, robots.txt y el manifest
   verificar.mjs      Comprueba enlaces, SEO, JSON-LD, CSP, accesibilidad básica y secretos
@@ -37,6 +37,8 @@ Requiere Node 20 o superior. No hay `npm install` porque no hay dependencias.
 ## Integraciones con n8n
 
 ### Diagnóstico (`/api/diagnostico`) — listo para conectar
+
+El formulario está en la página `/diagnostico` (`src/pages/diagnostico.mjs`, lógica en `assets/js/diagnostico.js`). Los enlaces antiguos a `/#diagnostico` redirigen ahí (`assets/js/site.js`).
 
 1. En n8n, crea un flujo con un nodo **Webhook** (POST) y copia la URL de producción.
 2. En el webhook, comprueba que la cabecera `X-EtherIA-Secret` coincida con tu secreto y rechaza la petición si no coincide.

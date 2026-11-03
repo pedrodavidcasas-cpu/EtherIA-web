@@ -9,6 +9,9 @@ export const FOUNDER = {
     h: 863,
     alt: 'Pedro David Casas Alba, fundador y CEO de EtherIA, en su espacio de trabajo junto al logotipo de EtherIA',
   },
+  // Resumen visible en la portada. La biografía completa (`bio`, texto del fundador, sin cambios) va en un desplegable.
+  summary:
+    'Soy cubano, vivo en San José y pasé más de seis años en atención al cliente en el sector turístico. Descubrí el potencial de la inteligencia artificial y la automatización, me capacité y creé EtherIA para resolver problemas reales de negocios con tecnología.',
   bio: [
     'Soy cubano, tengo 29 años y actualmente vivo en San José, Costa Rica, país al que llegué buscando nuevas oportunidades y la posibilidad de construir mi propio futuro.',
     'Mi camino comenzó con una formación académica orientada a las ciencias y la ingeniería, pero fue durante más de seis años trabajando en el sector turístico donde desarrollé una de mis mayores fortalezas: comprender a las personas, comunicarme con ellas y ofrecer un servicio de excelencia. Esa experiencia también me permitió desarrollar mis habilidades en inglés y francés.',
