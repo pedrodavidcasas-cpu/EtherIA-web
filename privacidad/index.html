@@ -92,7 +92,7 @@
     <p>No vendemos tu información ni la compartimos con terceros con fines comerciales.</p>
 
     <h2>6. Cómo procesamos las solicitudes del sitio</h2>
-    <p>Cuando envías el diagnóstico, la información viaja de forma cifrada a nuestro sistema de automatización, que la registra y avisa a una persona del equipo para que revise tu caso. Para ello utilizamos proveedores tecnológicos como Vercel (alojamiento del sitio), n8n (plataforma de automatización), Google Workspace (registro de solicitudes) y Telegram (avisos internos). Cada proveedor aplica sus propias medidas de seguridad y políticas de privacidad.</p>
+    <p>Cuando envías el diagnóstico, la información viaja de forma cifrada a nuestro sistema de automatización, que la registra y avisa a una persona del equipo para que revise tu caso. Para ello utilizamos proveedores tecnológicos como Vercel (alojamiento del sitio), n8n (plataforma de automatización), Google Sheets (registro de solicitudes) y Telegram (avisos internos). Cada proveedor aplica sus propias medidas de seguridad y políticas de privacidad.</p>
 
     <h2>7. Cookies</h2>
     <p>Este sitio no utiliza cookies de seguimiento ni publicidad. Si en el futuro incorporamos herramientas de analítica, actualizaremos esta política y, cuando corresponda, solicitaremos tu consentimiento.</p>
@@ -125,7 +125,7 @@
     <p>No vendemos estos datos, no los usamos para publicidad ni para fines propios de EtherIA, y no los compartimos con otras empresas clientes.</p>
 
     <h2>10. Procesamiento con inteligencia artificial</h2>
-    <p>Para generar las respuestas, el asistente envía el contenido de la conversación, junto con la información autorizada por la empresa cliente, a un proveedor de modelos de inteligencia artificial. El modelo interpreta la consulta y propone una respuesta, que el sistema envía por WhatsApp. Para dar continuidad a la conversación, el asistente puede usar su historial reciente.</p>
+    <p>Para generar las respuestas, el asistente envía el contenido de la conversación, junto con la información autorizada por la empresa cliente, a OpenAI, nuestro proveedor de modelos de inteligencia artificial, por medio de su interfaz de programación (API). El modelo interpreta la consulta y propone una respuesta, que el sistema envía por WhatsApp. Para dar continuidad a la conversación, el asistente guarda el historial reciente en una hoja de cálculo de Google (Google Sheets) y lo consulta al responder. Según las condiciones de OpenAI para su API, los datos que se le envían no se usan para entrenar sus modelos, salvo que el cliente lo autorice expresamente; EtherIA no da esa autorización.</p>
     <p>Las respuestas automáticas pueden contener errores. Por eso el asistente está pensado para pasar a una persona las consultas que no puede resolver, y las decisiones importantes (por ejemplo, confirmar una reserva o resolver un reclamo) quedan sujetas a lo que defina la empresa cliente. EtherIA no utiliza el contenido de las conversaciones para entrenar modelos propios.</p>
 
     <h2>11. Intervención humana y gestión manual</h2>
@@ -142,16 +142,20 @@
       <li><strong>Meta Platforms (WhatsApp Business Platform y Cloud API):</strong> transporte y entrega de los mensajes de WhatsApp, y registro integrado de las cuentas. Meta trata los mensajes según sus propias condiciones y su política de privacidad.</li>
       <li><strong>n8n:</strong> plataforma de automatización donde funcionan los flujos que reciben, procesan y responden los mensajes.</li>
       <li><strong>Hostinger:</strong> proveedor de servidores donde opera nuestra plataforma de automatización.</li>
-      <li><strong>Proveedores de modelos de inteligencia artificial:</strong> generan las respuestas del asistente a partir del contenido de la conversación.</li>
-      <li><strong>Google Workspace:</strong> registro de solicitudes y reservas, cuando la empresa cliente lo usa.</li>
+      <li><strong>OpenAI:</strong> modelos de inteligencia artificial que generan las respuestas del asistente a partir del contenido de la conversación.</li>
+      <li><strong>Google (Google Sheets):</strong> historial de las conversaciones que usa el asistente y registro de solicitudes y reservas.</li>
       <li><strong>Telegram:</strong> avisos internos a las personas responsables.</li>
       <li><strong>Vercel:</strong> alojamiento de este sitio web.</li>
     </ul>
+    <p>Para desarrollar y mantener los flujos y este sitio usamos herramientas de programación como Visual Studio Code y Claude Code (de Anthropic). Estas herramientas no responden las conversaciones de los clientes.</p>
 
     <h2>13. Conservación de los datos</h2>
     <ul>
-      <li><strong>Visitantes y prospectos:</strong> conservamos los datos de contacto y de las solicitudes mientras sean necesarios para atender tu consulta o la relación comercial, y los eliminamos cuando dejan de serlo o cuando nos lo pides, salvo que la ley nos obligue a conservarlos.</li>
-      <li><strong>Datos de empresas clientes:</strong> los conservamos solo mientras sean necesarios para prestar el servicio y según las instrucciones de la empresa cliente. Cuando termina el servicio, o cuando la empresa lo solicita, los eliminamos o se los entregamos, salvo que la ley nos obligue a conservarlos.</li>
+      <li><strong>Visitantes y prospectos:</strong> conservamos los datos de contacto y de las solicitudes mientras dure la conversación o la relación comercial. Si no llegas a contratar nuestros servicios, los eliminamos a más tardar 12 meses después del último contacto, o antes si nos lo pides.</li>
+      <li><strong>Historial de conversaciones del asistente:</strong> conservamos el historial que usa el asistente durante un máximo de 6 meses desde el último mensaje de cada persona, salvo que la empresa cliente nos indique un plazo menor.</li>
+      <li><strong>Solicitudes y reservas registradas:</strong> se conservan mientras la empresa cliente las necesite para su gestión y, como máximo, mientras dure el servicio.</li>
+      <li><strong>Al terminar el servicio:</strong> dentro de los 30 días siguientes, eliminamos o entregamos a la empresa cliente los datos tratados por su cuenta, y desactivamos la credencial de acceso a su cuenta de WhatsApp Business.</li>
+      <li>En todos los casos conservaremos un dato por más tiempo solo si la ley nos obliga.</li>
       <li>Meta y los demás proveedores pueden conservar ciertos datos durante los plazos que establecen sus propias condiciones.</li>
     </ul>
 
@@ -170,7 +174,7 @@
     <ul>
       <li>Escríbenos a <a href="mailto:pedrodavidcasas@gmail.com">pedrodavidcasas@gmail.com</a> indicando qué derecho quieres ejercer y el teléfono o correo relacionado con tus datos.</li>
       <li>Podemos pedirte información adicional para confirmar tu identidad antes de atender la solicitud, con el fin de proteger tus datos.</li>
-      <li>Responderemos dentro de los plazos que establece la normativa costarricense. Si tratamos los datos por cuenta de una empresa cliente, coordinaremos la respuesta con ella.</li>
+      <li>Confirmaremos que recibimos tu solicitud el mismo día hábil y la atenderemos lo antes posible, siempre dentro de los plazos que establece la normativa costarricense. Si tratamos los datos por cuenta de una empresa cliente, coordinaremos la respuesta con ella.</li>
     </ul>
     <p>Si consideras que no se atendieron tus derechos, puedes acudir a la Agencia de Protección de Datos de los Habitantes (PRODHAB).</p>
 
